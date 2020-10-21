@@ -304,13 +304,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: -0.23721878, y: -0.7500667, z: 0.3497622, w: -0.5087177}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 50, y: -248.293, z: 0}
 --- !u!1 &714974264 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 166016, guid: f657c58adb4c219419ae056411d88e27, type: 3}
@@ -332,21 +332,6 @@ MonoBehaviour:
   RandomDelay: 5
   vitesseAvance: 2
   vitesseTourne: 20
---- !u!114 &714974267
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 714974264}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcb884437d96c9b4ea3990e5ee4154f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MinSoundDelay: 1
-  RandomDelay: 5
-  MaxDeltaPitch: 1
 --- !u!1 &751282384
 GameObject:
   m_ObjectHideFlags: 0
@@ -624,6 +609,10 @@ PrefabInstance:
       propertyPath: m_Pitch
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5274542606027408158, guid: f657c58adb4c219419ae056411d88e27, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -808772937233710536, guid: 02139b4b29415b04f96966f6ad94c05c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f657c58adb4c219419ae056411d88e27, type: 3}
 --- !u!4 &1013773501 stripped
@@ -706,6 +695,10 @@ PrefabInstance:
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5274542606027408158, guid: f657c58adb4c219419ae056411d88e27, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 7893064393703283697, guid: 02139b4b29415b04f96966f6ad94c05c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f657c58adb4c219419ae056411d88e27, type: 3}
 --- !u!4 &1048961100 stripped
@@ -861,21 +854,6 @@ MonoBehaviour:
   RandomDelay: 5
   vitesseAvance: 2
   vitesseTourne: 20
---- !u!114 &1156576755
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1156576752}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcb884437d96c9b4ea3990e5ee4154f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MinSoundDelay: 1
-  RandomDelay: 5
-  MaxDeltaPitch: 1
 --- !u!1 &1634669247
 GameObject:
   m_ObjectHideFlags: 0
@@ -1003,6 +981,39 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1700476659 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1635497915976585574, guid: 5344b368a123f78448a5ebf2c3447e05, type: 3}
+  m_PrefabInstance: {fileID: 802073250530115949}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1700476660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700476659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f3f9312248094a4ca188ee9dd057ab4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  centreZone: {x: 0, y: 0, z: 0}
+  radiusStartEffect: 10
+  mixer: {fileID: 24100000, guid: 02139b4b29415b04f96966f6ad94c05c, type: 2}
+  trackedObjects:
+  - transform: {fileID: 1013773501}
+    MixerParameter: RvbDck1
+    MinVal: -80
+    MaxVal: 0
+  - transform: {fileID: 1048961100}
+    MixerParameter: RvbDck2
+    MinVal: -80
+    MaxVal: 0
+  - transform: {fileID: 1878176820}
+    MixerParameter: RvbDck3
+    MinVal: -80
+    MaxVal: 0
 --- !u!1001 &1878176819
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1012,7 +1023,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 166016, guid: f657c58adb4c219419ae056411d88e27, type: 3}
       propertyPath: m_Name
-      value: LOVEDUCK
+      value: LOVEDUCK(3)
       objectReference: {fileID: 0}
     - target: {fileID: 466016, guid: f657c58adb4c219419ae056411d88e27, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1066,6 +1077,10 @@ PrefabInstance:
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5274542606027408158, guid: f657c58adb4c219419ae056411d88e27, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -6181423810232767023, guid: 02139b4b29415b04f96966f6ad94c05c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f657c58adb4c219419ae056411d88e27, type: 3}
 --- !u!4 &1878176820 stripped
@@ -1094,21 +1109,6 @@ MonoBehaviour:
   RandomDelay: 5
   vitesseAvance: 2
   vitesseTourne: 20
---- !u!114 &2060393049
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2060393046}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcb884437d96c9b4ea3990e5ee4154f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MinSoundDelay: 1
-  RandomDelay: 5
-  MaxDeltaPitch: 1
 --- !u!1001 &802073250530115949
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1116,6 +1116,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 802073251141817722, guid: 5344b368a123f78448a5ebf2c3447e05, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.803
+      objectReference: {fileID: 0}
+    - target: {fileID: 802073251141817722, guid: 5344b368a123f78448a5ebf2c3447e05, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.67819494
+      objectReference: {fileID: 0}
     - target: {fileID: 1635497915976585574, guid: 5344b368a123f78448a5ebf2c3447e05, type: 3}
       propertyPath: m_Name
       value: CompleteTunnel
